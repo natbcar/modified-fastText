@@ -52,6 +52,7 @@ FastText::FastText()
 
 void FastText::addInputVector(Vector& vec, int32_t ind) const {
   vec.addRow(*input_, ind);
+  vec.addRow(*output_, ind);
 }
 
 std::shared_ptr<const Dictionary> FastText::getDictionary() const {
